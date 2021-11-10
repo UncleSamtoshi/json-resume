@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "jsonresume-theme-even": "^0.13.0",
+    "jsonresume-theme-onepage": "0.0.3",
+    "jsonresume-theme-spartan": "^0.3.0",
     "jsonresume-theme-stackoverflow": "^1.4.0"
   }
 }

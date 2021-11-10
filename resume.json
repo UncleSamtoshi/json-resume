@@ -15,19 +15,12 @@
         "network": "Twitter",
         "username": "UncleSamtoshi",
         "url": "https://twitter.com/UncleSamtoshi"
-      },
-      {
-        "network": "Anchor",
-        "username": "Uncle-Samtoshi",
-        "url": "https://anchor.fm/uncle-samtoshi"
       }
     ]
   },
   "work": [
     {
       "company": "Microsoft - Cloud + AI",
-      "location": "Seattle, WA",
-      "description": "Awesome compression company",
       "position": "Software Developer",
       "startDate": "2020-06-01",
       "summary": "Building infrastruture for automated testing of Visual Studio IDE.",
@@ -104,19 +97,6 @@
         "Umbrel",
         "EmbassyOS"
       ]
-    },
-    {
-      "name": "Bitcoin Content",
-      "keywords": [
-        "The Bitcoin Standard",
-        "Blocksize Wars",
-        "Book of Satoshi",
-        "Mastering Bitcoin",
-        "Mastering Lightning",
-        "Citadel Dispatch",
-        "TFTC",
-        "Lightning Junkies"
-      ]
     }
   ],
   "projects": [
@@ -125,24 +105,15 @@
       "description": "A podcast where I discuss random Bitcoin topics.",
       "url": "https://anchor.fm/uncle-samtoshi",
       "startDate": "2021-08-01",
-      "roles": [
-        "Creator"
-      ],
       "highlights": [
         "Distributed to Apple Podcasts, Google Podcasts, Spotify, and Podcasting 2.0 platforms."
       ]
     },
     {
       "name": "Seattle Bitcoin and Beer Meetup",
-      "description": "A Bitcoin meetup I founded in the Seattle area.",
-      "highlights": [
-        "100+ Members"
-      ],
+      "description": "A Bitcoin meetup I founded in the Seattle area with 100+ members.",
       "startDate": "2021-09-01",
-      "url": "https://www.meetup.com/seattle-bitcoin-and-beer/",
-      "roles": [
-        "Founder"
-      ]
+      "url": "https://www.meetup.com/seattle-bitcoin-and-beer/"
     }
   ],
   "meta": {
