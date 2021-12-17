@@ -25,8 +25,8 @@
         "startDate": "2020-06-01",
         "summary": "Building infrastruture for automated testing of Visual Studio IDE.",
         "highlights": [
-          "Delivering a service for creating and managing virtual machines on self-hosted ARM64 hardware that enables existing CI and CD pipelines to test on ARM64 for the first time. The service leverages Parallels Virtualization, Python scripts, and Azure DevOps Pipelines for management of the VMs.",
-          "Built a server-less api with .NET and Azure Durable Functions for accessing the performance data of builds from an Azure DevOps plugin.",
+          "Delivering a service for creating and managing virtual machines on self-hosted hardware that enables existing CI/CD pipelines to test on ARM64 for the first time. The service leverages Parallels Virtualization, Python scripts, and Azure DevOps Pipelines for management of the VMs.",
+          "Built a server-less api using .NET and Azure Durable Functions for accessing the performance data of builds from an Azure DevOps plugin.",
           "Designed a NoSQL database schema and built the ingestion code for performance data of 200+ builds per week.",
           "Instrumented telemetry collection and visualization to ensure a smooth transition of our on-prem testing infrastructure to cloud infrastructure."
         ]
@@ -40,7 +40,7 @@
         "highlights": [
           "Built a NodeJS + MongoDB backend to manage users, posts, communities, and wiki documents.",
           "Created a React SPA and React Native mobile application utilizing Redux for state management.",
-          "Built a notifications system using scheduled sever-less functions and integrating with Twilio api for communication.",
+          "Built a notifications system using scheduled sever-less functions and integrated with Twilio api for communication.",
           "Managed Azure cloud infrastructure and established continuous deployment through Azure DevOps Pipelines.",
           "Onboarded 50+ users and monitored customer feedback/telemetry to improve the product."
         ]
