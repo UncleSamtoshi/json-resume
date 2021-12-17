@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "handlebars": "^4.7.7",
     "jsonresume-theme-even": "^0.13.0",
     "jsonresume-theme-onepage": "0.0.3",
     "jsonresume-theme-spartan": "^0.3.0",

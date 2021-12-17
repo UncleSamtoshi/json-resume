@@ -3,7 +3,7 @@
     "basics": {
       "name": "Samuel Peters",
       "label": "Software Engineer",
-      "email": "peterssam@protonmail.com",
+      "email": "{{email}}",
       "summary": "Bitcoiner looking to leave big tech and speed up the adoption of freedom money.",
       "location": {
         "city": "Seattle",
