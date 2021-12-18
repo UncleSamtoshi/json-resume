@@ -9,19 +9,29 @@ const templateParameters = {
     email: process.env.email
 }
 const filters = {
-    noTwitter: (resume => ({...resume,basics:{...resume.basics,profiles:(resume.basics.profiles.filter(profile => (profile.network != "Twitter")))}}))
+    noTwitter: (resume => ({...resume,basics:{...resume.basics,profiles:(resume.basics.profiles.filter(profile => (profile.network != "Twitter")))}})),
+    noEducation: (resume => ({...resume,education:[]})),
+    noEmail: (resume => ({...resume,basics:{...resume.basics,email:""}}))
 }
 const resumeDefinitions = [
     {
         name: "BitcoinResume",
         filters: [
-        ]
+        ],
+        theme:"jsonresume-theme-onepage"
     },
     {
         name: "SamuelPetersStrikeResume",
         filters: [
-            filters.noTwitter
-        ]
+            filters.noEducation
+        ],
+        theme:"jsonresume-theme-onepage"
+    },
+    {
+        name: "SamuelPetersBitcoinResume",
+        filters: [
+        ],
+        theme:"jsonresume-theme-even"
     }
 ]
 
@@ -33,8 +43,8 @@ const baseResumeObject = JSON.parse(baseResumePostTemplate)
 
 // Create resumes base on individual definitions
 const filterResume = (resume, filters) => {
-    var newResume = {...baseResumeObject}
-    filters.forEach(singleFilter => newResume = singleFilter(resume))
+    var newResume = {...resume}
+    filters.forEach(singleFilter => {newResume = singleFilter(newResume)})
     return newResume
 }
 const resumes = resumeDefinitions.map(def => ({...def,resumeJson:filterResume(baseResumeObject,def.filters)}))
@@ -42,7 +52,7 @@ const resumes = resumeDefinitions.map(def => ({...def,resumeJson:filterResume(ba
 // Create HTML files
 resumes.forEach(resume => {
     fs.writeFileSync(`${resume.name}.json`,JSON.stringify(resume.resumeJson))
-    exec(`resume export -r ${resume.name}.json -f html public/${resume.name}.html`, (error, stdout, stderr) => {
+    exec(`resume export -r ${resume.name}.json -f html public/${resume.name}.html ${resume.theme ? `-t ${resume.theme}` : ""}`, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
@@ -52,7 +62,7 @@ resumes.forEach(resume => {
             return;
         }
         console.log(`stdout: ${stdout}`);
+        fs.rmSync(`${resume.name}.json`)
     });
-    fs.rmSync(`${resume.name}.json`)
 })
 

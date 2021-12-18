@@ -25,19 +25,23 @@
     },
     "work": [
       {
-        "company": "Microsoft - Cloud + AI",
+        "name": "Microsoft - Cloud + AI",
+        "company":"Microsoft - Cloud + AI",
+        "url": "https://microsoft.com",
         "position": "Software Developer",
         "startDate": "2020-06-01",
         "summary": "Building infrastruture for automated testing of Visual Studio IDE.",
         "highlights": [
           "Delivering a service for creating and managing virtual machines on self-hosted hardware that enables existing CI/CD pipelines to test on ARM64 for the first time. The service leverages Parallels Virtualization, Python scripts, and Azure DevOps Pipelines for management of the VMs.",
-          "Built a server-less api using .NET and Azure Durable Functions for accessing the performance data of builds from an Azure DevOps plugin.",
+          "Built a server-less api using .NET and Azure Durable Functions that stores, processes, and serves build performance data.",
           "Designed a NoSQL database schema and built the ingestion code for performance data of 200+ builds per week.",
           "Instrumented telemetry collection and visualization to ensure a smooth transition of our on-prem testing infrastructure to cloud infrastructure."
         ]
       },
       {
-        "company": "Flock",
+        "name": "Flock",
+        "company":"Flock",
+        "url":"https://bitcoin.clarkmoody.com/dashboard",
         "position": "Full Stack Developer & Co-Founder",
         "startDate": "2020-07-01",
         "endDate": "2021-01-01",
@@ -45,7 +49,7 @@
         "highlights": [
           "Built a NodeJS + MongoDB backend to manage users, posts, communities, and wiki documents.",
           "Created a React SPA and React Native mobile application utilizing Redux for state management.",
-          "Built a notifications system using scheduled sever-less functions and integrated with Twilio api for communication.",
+          "Built a notifications system using scheduled sever-less functions and a Twilio api integration for communication.",
           "Managed Azure cloud infrastructure and established continuous deployment through Azure DevOps Pipelines.",
           "Onboarded 50+ users and monitored customer feedback/telemetry to improve the product."
         ]
@@ -69,11 +73,10 @@
       {
         "name": "Languages",
         "keywords": [
-          "Node",
-          "React",
           "C#",
           "Python",
-          "Go",
+          "Node",
+          "React",
           "Java",
           "Powershell",
           "Bash"
@@ -92,28 +95,20 @@
       {
         "name": "Bitcoin Tools",
         "keywords": [
-          "Whirlpool",
           "SeedSigner",
           "Sparrow",
           "LND",
           "Multisig",
-          "Breez",
-          "Comapss Mining",
-          "Umbrel",
-          "EmbassyOS"
+          "EmbassyOS",
+          "Zap"
         ]
       },
       {
-        "name": "Bitcoin Content",
+        "name": "Bitcoin Education",
         "keywords": [
-          "The Bitcoin Standard",
-          "Blocksize Wars",
-          "Book of Satoshi",
           "Mastering Bitcoin",
           "Mastering Lightning",
-          "Citadel Dispatch",
-          "TFTC",
-          "Lightning Junkies"
+          "Citadel Dispatch"
         ]
       }
     ],
@@ -124,7 +119,7 @@
         "url": "https://anchor.fm/uncle-samtoshi",
         "startDate": "2021-08-01",
         "highlights": [
-          "Distributed to Apple Podcasts, Google Podcasts, Spotify, and Podcasting 2.0 platforms."
+          "Distributed via Podcasting 2.0 platforms with Lightning micropayments enabled."
         ]
       },
       {
