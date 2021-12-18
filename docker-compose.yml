@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+ node:
+   build: .
+   ports:
+     - 4000:4000
+   environment:
+     - HELLO=WORLD
+   volumes:
+     - ./:/code
+   command: tail -f dev/null
+   
