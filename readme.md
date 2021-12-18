@@ -6,7 +6,6 @@ This project stores my resume under source control and has some added features f
 
 ```
 docker-compose up -d
-resume serve -r BitcoinResume.json
 docker exec -it json-resume_node_1 sh
 cd code
 npm install
