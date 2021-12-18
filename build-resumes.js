@@ -15,7 +15,6 @@ const resumeDefinitions = [
     {
         name: "BitcoinResume",
         filters: [
-            // (resume => ({ ...resume, work: resume.work.filter(experience => experience.company != "Flock") }))
         ]
     },
     {
