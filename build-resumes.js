@@ -5,21 +5,26 @@ const { exec } = require("child_process")
 
 // Config for resumes
 const baseResumeTemplatePath = "./resume-base.json"
-const resumeDefinitions = [
-    {
-        name: "BitcoinResume",
-        theme: "",
-        filters: [(resume => ({ ...resume, work: resume.work.filter(experience => experience.company != "Flock") }))]
-    },
-    {
-        name: "NormieResume",
-        theme: "",
-        filters: []
-    }
-]
 const templateParameters = {
     email: process.env.email
 }
+const filters = {
+    noTwitter: (resume => ({...resume,basics:{...resume.basics,profiles:(resume.basics.profiles.filter(profile => (profile.network != "Twitter")))}}))
+}
+const resumeDefinitions = [
+    {
+        name: "BitcoinResume",
+        filters: [
+            // (resume => ({ ...resume, work: resume.work.filter(experience => experience.company != "Flock") }))
+        ]
+    },
+    {
+        name: "SamuelPetersStrikeResume",
+        filters: [
+            filters.noTwitter
+        ]
+    }
+]
 
 // Apply Handlebars template parameters
 const baseResumeTemplate = fs.readFileSync(baseResumeTemplatePath, "utf8")
@@ -35,20 +40,20 @@ const filterResume = (resume, filters) => {
 }
 const resumes = resumeDefinitions.map(def => ({...def,resumeJson:filterResume(baseResumeObject,def.filters)}))
 
-// Create json files, PDF's, and HTML
+// Create HTML files
 resumes.forEach(resume => {
     fs.writeFileSync(`${resume.name}.json`,JSON.stringify(resume.resumeJson))
+    exec(`resume export -r ${resume.name}.json -f html public/${resume.name}.html`, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+    });
+    fs.rmSync(`${resume.name}.json`)
 })
 
-// // Create PDF's and html from resumes
-// exec("resume export -r ./resume-updated.json ./bitcoinresume.pdf -t ./node_modules/jsonresume-theme-stackoverflow", (error, stdout, stderr) => {
-//     if (error) {
-//         console.log(`error: ${error.message}`);
-//         return;
-//     }
-//     if (stderr) {
-//         console.log(`stderr: ${stderr}`);
-//         return;
-//     }
-//     console.log(`stdout: ${stdout}`);
-// });

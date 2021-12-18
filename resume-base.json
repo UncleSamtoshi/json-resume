@@ -15,6 +15,11 @@
           "network": "Twitter",
           "username": "UncleSamtoshi",
           "url": "https://twitter.com/UncleSamtoshi"
+        },
+        {
+          "network": "Github",
+          "username": "UncleSamtoshi",
+          "url": "https://github.com/UncleSamtoshi"
         }
       ]
     },
@@ -80,7 +85,8 @@
           "Azure Pipelines",
           "Azure Cloud",
           "MongoDB",
-          "Expo"
+          "Expo",
+          "Docker"
         ]
       },
       {

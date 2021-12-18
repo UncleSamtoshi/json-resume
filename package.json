@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build-resume.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "express": "^4.17.2",
     "handlebars": "^4.7.7",
     "jsonresume-theme-even": "^0.13.0",
     "jsonresume-theme-onepage": "0.0.3",
